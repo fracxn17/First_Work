@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leaderboard - LoopLearn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow flex justify-between items-center">
+    <h1 class="text-2xl font-bold">📊 LoopLearn Leaderboard</h1>
+    <a href="dashboard.html" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-200">Back to Dashboard</a>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto mt-10 px-4">
+
+    <!-- Leaderboard Tabs -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- 🔹 Host Review Leaderboard -->
+      <section class="bg-white rounded shadow p-6">
+        <h2 class="text-xl font-bold text-blue-600 mb-4">🏅 Top Hosts (by Reviews)</h2>
+        <table class="w-full text-left table-auto">
+          <thead>
+            <tr class="bg-blue-100">
+              <th class="px-4 py-2">Rank</th>
+              <th class="px-4 py-2">Name</th>
+              <th class="px-4 py-2">Sessions Hosted</th>
+              <th class="px-4 py-2">Total Reviews</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-50">
+              <td class="px-4 py-2 font-bold">1</td>
+              <td class="px-4 py-2">Aarav Sen</td>
+              <td class="px-4 py-2">28</td>
+              <td class="px-4 py-2">163</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-4 py-2 font-bold">2</td>
+              <td class="px-4 py-2">Megha Kapoor</td>
+              <td class="px-4 py-2">22</td>
+              <td class="px-4 py-2">140</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-4 py-2 font-bold">3</td>
+              <td class="px-4 py-2">Rohan Das</td>
+              <td class="px-4 py-2">19</td>
+              <td class="px-4 py-2">122</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 🔸 Doubt Solving Leaderboard -->
+      <section class="bg-white rounded shadow p-6">
+        <h2 class="text-xl font-bold text-green-600 mb-4">🧠 Top Solvers (Doubt Room)</h2>
+        <table class="w-full text-left table-auto">
+          <thead>
+            <tr class="bg-green-100">
+              <th class="px-4 py-2">Rank</th>
+              <th class="px-4 py-2">Name</th>
+              <th class="px-4 py-2">Doubts Solved</th>
+              <th class="px-4 py-2">Correct Answers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-50">
+              <td class="px-4 py-2 font-bold">1</td>
+              <td class="px-4 py-2">Priya Sharma</td>
+              <td class="px-4 py-2">42</td>
+              <td class="px-4 py-2">39</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-4 py-2 font-bold">2</td>
+              <td class="px-4 py-2">Siddharth Rao</td>
+              <td class="px-4 py-2">37</td>
+              <td class="px-4 py-2">35</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+              <td class="px-4 py-2 font-bold">3</td>
+              <td class="px-4 py-2">Tanvi Jain</td>
+              <td class="px-4 py-2">35</td>
+              <td class="px-4 py-2">33</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+
+    <!-- Last Updated -->
+    <p class="text-sm text-gray-500 text-center mt-10">📅 Last updated: July 29, 2025</p>
+  </main>
+
+</body>
+</html>

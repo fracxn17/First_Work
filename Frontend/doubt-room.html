@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Doubt Room - LoopLearn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col font-sans">
+
+  <!-- 🔷 Header -->
+  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex justify-between items-center shadow">
+    <h1 class="text-xl font-bold">🎓 LoopLearn | Doubt Room</h1>
+    <span class="text-sm opacity-90">🔍 Topic: JavaScript Array Help</span>
+  </header>
+
+  <!-- 💬 Chat Section -->
+  <main id="chat-box" class="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+    
+    <!-- Student Message -->
+    <div class="flex items-start gap-3">
+      <img src="https://api.dicebear.com/7.x/thumbs/svg?seed=Student" class="w-10 h-10 rounded-full" />
+      <div>
+        <div class="bg-white p-3 rounded-xl shadow max-w-xl">
+          <p class="text-sm text-blue-700 font-semibold">Student</p>
+          <p>How do I loop through an array in JavaScript?</p>
+        </div>
+        <span class="text-xs text-gray-500 ml-1">10:45 AM</span>
+      </div>
+    </div>
+
+    <!-- Helper Message -->
+    <div class="flex items-start justify-end gap-3">
+      <div>
+        <div class="bg-green-100 p-3 rounded-xl shadow max-w-xl text-right">
+          <p class="text-sm text-green-700 font-semibold">You (Helper)</p>
+          <p>You can use a <code>for</code> loop or <code>.map()</code> function. Want an example?</p>
+        </div>
+        <span class="text-xs text-gray-500 text-right block">10:46 AM</span>
+      </div>
+      <img src="https://api.dicebear.com/7.x/thumbs/svg?seed=Helper" class="w-10 h-10 rounded-full" />
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="typing" class="flex gap-2 items-center text-sm text-gray-400">
+      <span class="animate-pulse">Helper is typing...</span>
+    </div>
+
+  </main>
+
+  <!-- 🛠️ Actions & Tools -->
+  <div class="p-2 flex justify-between items-center text-sm text-gray-600 border-t bg-white shadow-sm">
+    <div class="flex gap-4">
+      <button class="hover:text-blue-600">📎 Attach</button>
+      <button class="hover:text-blue-600">🖥️ Share Screen</button>
+      <button class="hover:text-blue-600">🎙️ Voice</button>
+    </div>
+    <button class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 text-xs">Resolve Doubt</button>
+  </div>
+
+  <!-- 🔻 Input Footer -->
+  <footer class="p-4 border-t bg-white flex items-center gap-2">
+    <input type="text" placeholder="Type your reply..." class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
+  </footer>
+
+  <script>
+    // Auto scroll to bottom
+    const chatBox = document.getElementById('chat-box');
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    // Simulated typing effect (can be removed or used with real-time logic)
+    setTimeout(() => {
+      document.getElementById("typing").style.display = "none";
+    }, 2000);
+  </script>
+</body>
+</html>
