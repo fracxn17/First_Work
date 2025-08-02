@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LoopLearn - Learn, Teach, Earn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body::before {
+      content: "";
+      background-image: url('Untitled design.png');
+      background-size: 450px;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.06;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    body > * {
+      position: relative;
+      z-index: 10;
+    }
+
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 1s ease-out;
+    }
+
+    .dark {
+      background-color: #1f2937;
+      color: #f9fafb;
+    }
+
+    .dark .bg-white { background-color: #374151; }
+    .dark .text-gray-800 { color: #f9fafb; }
+    .dark .text-gray-600 { color: #d1d5db; }
+    .dark .bg-gray-50 { background-color: #374151; }
+    .dark .text-yellow-700 { color: #fde68a; }
+    .dark .bg-blue-600 { background-color: #2563eb; }
+    .dark .bg-blue-600:hover { background-color: #1d4ed8; }
+    .dark .text-blue-600 { color: #93c5fd; }
+    .dark .menu-icon { color: #ffffff; }
+    .dark .testimonial-text { color: #e5e7eb; }
+    .dark .description-text { color: #d1d5db; }
+
+    .section-border {
+      border-bottom: 2px solid #2dd4bf;
+    }
+
+    .dropdown-menu {
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+    }
+
+    .dropdown-menu a {
+      color: black;
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menuDropdown").classList.toggle("hidden");
+    }
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle("dark");
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 transition-all duration-300">
+
+  <!-- ✅ Header -->
+  <header class="bg-blue-600 text-white p-4 fixed top-0 left-0 w-full shadow z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">LoopLearn</h1>
+      <div class="flex items-center gap-4 relative">
+        <a href="login.html#login" class="bg-white text-blue-600 px-4 py-2 rounded 
+           hover:bg-gray-200 hover:shadow-lg hover:scale-105 active:scale-95 
+           transition-all duration-300 hover:animate-pulse">Login</a>
+
+        <!-- 3-dot menu -->
+        <div class="relative">
+          <button onclick="toggleMenu()" class="text-white text-2xl menu-icon">⋮</button>
+          <div id="menuDropdown" class="absolute right-0 mt-2 w-40 dropdown-menu rounded shadow-lg text-sm hidden z-50">
+            <a href="about.html" class="block px-4 py-2 hover:bg-gray-100">About</a>
+            <a href="help.html" class="block px-4 py-2 hover:bg-gray-100">Help</a>
+            <button onclick="toggleDarkMode()" class="w-full text-left text-black px-4 py-2 hover:bg-gray-100">Dark Mode</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ Spacer -->
+  <div class="pt-20"></div>
+
+  <!-- ✅ Hero Section -->
+  <section class="text-center py-20 bg-white section-border">
+    <h1 class="text-5xl font-bold mb-4 text-blue-600 animate-fade-in">LoopLearn</h1>
+    <p class="description-text text-xl mb-6 transition-opacity duration-700">Learn, Teach, and Earn — All in One Place</p>
+    <a href="login.html#signup" class="bg-blue-600 text-white px-6 py-3 rounded 
+       hover:bg-blue-700 hover:shadow-xl hover:scale-110 active:scale-95 
+       transition-all duration-300 animate-fade-in hover:animate-pulse">Join Now</a>
+  </section>
+
+  <!-- ✅ Features Section -->
+  <section class="grid md:grid-cols-3 gap-6 p-10 bg-white group section-border">
+    <div class="p-6 shadow rounded text-center border border-[#2dd4bf] transition-all duration-300 group-hover:opacity-40 hover:!opacity-100 hover:scale-105">
+      <h3 class="font-bold text-lg mb-2">No Teachers, Only Peers</h3>
+      <p>Everyone is both a learner and helper.</p>
+    </div>
+    <div class="p-6 shadow rounded text-center border border-[#2dd4bf] transition-all duration-300 group-hover:opacity-40 hover:!opacity-100 hover:scale-105">
+      <h3 class="font-bold text-lg mb-2">Earn & Redeem Credits</h3>
+      <p>Help others and earn redeemable points.</p>
+    </div>
+    <div class="p-6 shadow rounded text-center border border-[#2dd4bf] transition-all duration-300 group-hover:opacity-40 hover:!opacity-100 hover:scale-105">
+      <h3 class="font-bold text-lg mb-2">Live Doubt Solving</h3>
+      <p>Connect instantly via chat or screen share.</p>
+    </div>
+  </section>
+
+  <!-- ✅ Testimonials -->
+  <section class="bg-white p-10 text-center section-border">
+    <h2 class="text-2xl font-bold mb-6 animate-fade-in">💬 What Students Say</h2>
+    <blockquote class="italic testimonial-text opacity-80 hover:opacity-100 transition-opacity duration-500">
+      "I finally understood DSA thanks to LoopLearn!" — Nagini, 2nd Year
+    </blockquote>
+  </section>
+
+  <!-- ✅ Call to Action -->
+  <section class="text-center py-10 bg-blue-600 text-white section-border">
+    <h2 class="text-3xl font-bold mb-4 hover:scale-105 transition-transform duration-300">Join 1000+ Learners Now</h2>
+    <a href="login.html#signup" class="bg-white text-blue-600 px-6 py-3 rounded 
+       hover:bg-gray-200 hover:shadow-lg hover:scale-105 active:scale-95 
+       transition-all duration-300 hover:animate-pulse">Start Learning</a>
+  </section>
+
+</body>
+</html>
+hhash
